@@ -1,0 +1,19 @@
+{
+    "weapons": [
+    {
+        "name": "P90 Neoqueen",
+        "condition": ["Factory New", "Minimal Wear"],
+        "stattrak": [false]
+    }, 
+    {
+        "name": "Glock-18 Umbral Rabbit",
+        "condition": ["Factory New", "Minimal Wear"],
+        "stattrak": [false]
+    },
+    {
+        "name": "Banana Cannon",
+        "condition": ["Factory New", "Minimal Wear"],
+        "stattrak": [false]
+    }
+    ]
+}
