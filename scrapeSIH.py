@@ -14,26 +14,12 @@ import re
 def get_data(request):
 
     driver.get(request)
-
+    time.sleep(200)
     print(re.sub('[^a-zA-Z`]+', '', request))
-    #something = driver.find_element(By.CLASS_NAME, "responsive_page_content")
-    #something1 = something.find_element(By.CLASS_NAME, "responsive_page_template_content")
-    #something2 = something1.find_element(By.CLASS_NAME, "market_action_popup")
-    #article_floats = something2.find_elements(By.ID, "market_action_popup_itemactions")
-   # for article in article_floats:
-     #   articleResult = article.find_element(By.XPATH, "//a")
-    #    print(articleResult.get_attribute("href"))
-     #   print("Here it is")
+    article_floats = driver.find_elements(By.ID, "market_action_popup_itemactions")
+    for article in article_floats:
+        print(article)
     article_elements = driver.find_element(By.ID, 'searchResultsRows')
-    #listings = article_elements.find_elements(By.XPATH, "*")
-    #for i in range(1, len(listings)):
-      #  listings2 = listings[i].find_element(By.XPATH, "*")
-      #  listings3 = Select(listings2.find_element(By.XPATH, "//a"))
-      #  WebDriverWait(listings2, 20).until(EC.element_to_be_clickable((By.XPATH, "//a"))).click()
-
-        
-        
-       # listings3 = listings2.find_element(By.TAG_NAME, "a")
     element = article_elements.find_elements(
         By.CLASS_NAME, 'market_table_value')
     count = 1
@@ -53,7 +39,7 @@ def get_data(request):
                 price_fee = price_fee[:arrayIndexes[x]] + \
                     characters[x] + price_fee[arrayIndexes[x]:]
         except:
-            price_fee = str(99999999999)
+            price_fee = 99999999999
             characters = 99999999999
         print(characters)
         while (price_fee[len(price_fee)-1] != '.'):
@@ -63,8 +49,10 @@ def get_data(request):
         print("Resale: ", price_fee)
     print("Complete")
 
+chrome_options = Options()
+chrome_options.add_extension('~/Downloads/Steam-Inventory-Helper.crx')
 DRIVER_PATH = '/path/to/chromedriver'
-driver = webdriver.Chrome(executable_path=DRIVER_PATH)
+driver = webdriver.Chrome(options = chrome_options, executable_path=DRIVER_PATH)
 wait = WebDriverWait(driver, 10)
 f = open('./weapons.json')
 data = json.load(f)

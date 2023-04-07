@@ -3,17 +3,22 @@
     {
         "name": "P90 Neoqueen",
         "condition": ["Factory New", "Minimal Wear"],
-        "stattrak": [false]
+        "stattrak": [false],
+        "links": ["https://steamcommunity.com/market/listings/730/P90%20%7C%20Neoqueen%20%28Minimal%20Wear%29", "https://steamcommunity.com/market/listings/730/P90%20%7C%20Neoqueen%20%28Factory%20New%29"],
+        "testlink": "https://steamcommunity.com/market/listings/730/P90%20%7C%20Neoqueen%20%28Minimal%20Wear%29"
     }, 
     {
         "name": "Glock-18 Umbral Rabbit",
         "condition": ["Factory New", "Minimal Wear"],
-        "stattrak": [false]
+        "stattrak": [false],
+        "links": ["https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Umbral%20Rabbit%20(Minimal%20Wear)", "https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Umbral%20Rabbit%20(Factory%20New)"],
+        "testlink": "https://steamcommunity.com/market/listings/730/P90%20%7C%20Neoqueen%20%28Minimal%20Wear%29" 
     },
     {
         "name": "Banana Cannon",
         "condition": ["Factory New", "Minimal Wear"],
-        "stattrak": [false]
+        "links": ["https://steamcommunity.com/market/listings/730/R8%20Revolver%20%7C%20Banana%20Cannon%20%28Minimal%20Wear%29", "https://steamcommunity.com/market/listings/730/R8%20Revolver%20%7C%20Banana%20Cannon%20%28Factory%20New%29"],
+        "testlink": "https://steamcommunity.com/market/listings/730/P90%20%7C%20Neoqueen%20%28Minimal%20Wear%29" 
     }
     ]
 }
